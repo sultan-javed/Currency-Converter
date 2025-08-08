@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/output.css" />
+    <title>Currency Converter</title>
+    <style>
+      select option {
+        background: rgba(15, 12, 41, 0.9);
+        color: white;
+        padding: 8px;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] min-h-screen flex items-center justify-center px-4"
+  >
+    <div
+      class="bg-white/10 backdrop-blur-xl rounded-3xl shadow-2xl p-6 w-full max-w-lg border border-white/20 transition-all hover:scale-[1.01] duration-300"
+    >
+      <h1
+        class="text-3xl font-extrabold text-white text-center mb-6 tracking-tight"
+      >
+        💱 Currency Converter
+      </h1>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div class="space-y-3">
+          <label class="block text-sm font-semibold text-white">From</label>
+          <select
+            id="curr-left"
+            class="w-full bg-white/20 border border-white/30 rounded-xl px-4 py-3 text-white focus:ring-4 focus:ring-blue-300 focus:border-blue-300 outline-none transition duration-300"
+          ></select>
+          <input
+            type="number"
+            id="from-input"
+            placeholder="Amount"
+            class="w-full bg-white/20 border border-white/30 rounded-xl px-4 py-3 text-white placeholder-gray-200 focus:ring-4 focus:ring-blue-300 focus:border-blue-300 outline-none transition duration-300"
+          />
+        </div>
+
+        <div class="space-y-3">
+          <label class="block text-sm font-semibold text-white">To</label>
+          <select
+            id="curr-right"
+            class="w-full bg-white/20 border border-white/30 rounded-xl px-4 py-3 text-white focus:ring-4 focus:ring-pink-300 focus:border-pink-300 outline-none transition duration-300"
+          ></select>
+          <input
+            type="number"
+            id="to-result"
+            placeholder="Converted"
+            readonly
+            class="w-full bg-white/20 border border-white/30 rounded-xl px-4 py-3 text-white placeholder-gray-200 focus:outline-none"
+          />
+        </div>
+      </div>
+
+      <button
+        id="btn"
+        class="w-full bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 text-white py-3 rounded-4xl font-bold text-lg shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
+      >
+        Convert 🚀
+      </button>
+    </div>
+
+    <script src="/src/app.js"></script>
+  </body>
+</html>
